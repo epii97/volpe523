@@ -1,0 +1,701 @@
+@charset "utf-8";
+
+/* base */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+::before , ::after {
+	box-sizing: inherit;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	vertical-align: middle;
+	text-align: inherit;
+	font: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+
+#wrap{
+    height: 100%;
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 120px;
+    box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 100%;
+	line-height: 150%;
+	background-color:#3E4C3890;
+	width: 100%;
+	overflow-x: hidden;
+	
+}
+
+bodys {
+	font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 100%;
+	line-height: 150%;
+	width: 100%;
+	overflow-y: hidden;
+	
+}
+
+header,nav,#category,#content,footer{
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header{
+	display: flex;
+    background-image: url("../images/heddaer.png");
+	background-repeat: no-repeat;
+	background-clip:border-box;
+	background-position: left bottom  ;
+	background-color: #A9B7B7;
+	z-index: 30;
+}
+header h1{
+	width: auto;
+	
+	
+}
+nav ul li{
+	margin-right: -30px;
+	
+}
+
+#home{
+	z-index: -1;
+    bottom: 0;
+    overflow: hidden;
+	right: 0;
+	left:0;
+	top:0;
+     height: 100%;
+    }
+	
+.background{
+	opacity:60%;
+	width: 100%;
+	height: 120%;
+	scrollbar-width: none;
+}
+
+img.VolpeBeat{
+	width: 40%;
+	margin-top: 0px;
+	 
+}
+
+img.carousel-img{
+	width: 100%;
+	margin-top: 0px;
+}
+
+.menu {
+  width: 70%;
+  height: 100%;
+  margin-left: auto;
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  color: #efefef;
+  background-image:url("../images/背景メニュー.gif");
+  transition: .3s;
+	z-index: 20;
+}
+
+.menu-list {
+  height: 0px;
+  /* メニューテキスト位置をリスト内中心に */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+	margin-left:0px;
+	margin-top:150px;
+	margin-bottom: 0px;
+	padding:auto 40px;
+	font-size: 30px;
+	
+}
+nav ul li{
+	margin-right: 0px;
+	font-kerning: auto;
+}
+
+
+
+
+.menu {
+  /* メニューの位置マイナス指定で画面外に */
+  position: fixed;
+  right: -70%;
+  width: 70%;
+  height: 100vh;
+  /* メニューを縦に */
+  display: flex;
+  flex-direction: column;
+  color: #efefef;
+  background-color:#2C4F4F80;
+  transition: .3s;
+}
+
+.btn {
+  /* ボタンの配置位置  */
+  position: fixed;
+  top: 32px;
+  right: 16px;
+  /* ボタンの大きさ  */
+  width: 48px;
+  height: 48px;
+  /* 最前面に */
+  z-index: 30;
+  background-color: red; /* わかりやすいように */
+}
+
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+	display: block;
+	position: relative;  /* バーガー線の位置基準として設定 */
+	width: 100%;  /* 線の長さと高さ */
+	height: 4px;
+	background-color: #3E4C38;  /* バーガー線の色 */
+	transition: .2s;
+}
+/***** 真ん中のバーガー線 *****/
+.btn-line {
+	display: block;
+	position: relative;  /* バーガー線の位置基準として設定 */
+	width: 100%;  /* 線の長さと高さ */
+	height: 4px;
+	background-color: #3E4C38;  /* バーガー線の色 */
+	transition: .2s;
+}
+
+/****** 上下のバーガー線 *****/
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3E4C38;
+  transition: .5s;
+}
+.btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-16px);
+}
+.btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(16px);
+}
+
+.menu.open {
+  right: -50%;
+}
+/***** メニューオープン時 *****/
+.btn-line.open {
+	background-color: transparent;  	/* 真ん中の線を透明に */
+}
+.btn-line.open::before ,
+.btn-line.open::after {
+	content: "";
+	background-color: #333;  /* 上下の線の色を変える */
+	transition: .2s;
+}
+.btn-line.open::before {
+	transform: rotate(45deg);  /* 上の線を傾ける */
+}
+.btn-line.open::after {
+	transform: rotate(-45deg);  /* 下の線を傾ける */
+}
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+#manu{
+	width: 80%;
+	overflow: hidden;
+	align-content: center;
+	margin-left: 10%;
+}
+#manus{
+	width: 80%;
+	overflow: hidden;
+	align-content: center;
+	margin-left: 10%;
+	position: relative;
+	bottom: 100px;
+	position: fixed;
+}
+.carousel {
+  width: 80%;
+  height: calc(300px * 0.5625);
+  margin: 20px;
+	position: relative;
+	right: 40px;
+}
+.carousel-area {
+	width: auto;
+ position: absolute;
+  height: 100%;
+  display: flex;
+
+}
+.carousel-list {
+  width: 400px;
+	 list-style: none;
+	
+}
+
+
+/* ボタンタグの装飾リセット */
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color:#A9B7B7;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0;
+	
+   
+}
+/*********** スライド送りボタン ***********/
+/* 共有パーツ */
+.arow-wrap {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top:-100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.arrow-btn {
+  width: 48px;
+  height: 48px;
+  background-color: #A9B7B7;
+  border-radius: 50%;
+  transition: .2s;
+
+	
+	
+}
+.arrow-btn:focus {
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+}
+.arrow-btn:hover {
+  background-color: rgb(51, 79, 216);
+  box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
+	z-index: 3;
+}
+/* 左 */
+.arrow-left {
+  position: relative
+}
+/* ボタン左の中身（三角を擬似要素で表現） */
+.arrow-left:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid  #F1F2F2;
+  border-left: 2px solid #F1F2F2;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-30%, -50%)rotate(-45deg);
+}
+/* 右 */
+.arrow-right {
+  position: relative
+}
+/* ボタン右の中身（三角を擬似要素で表現） */
+.arrow-right:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fefefe;
+  border-left: 2px solid #fefefe;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-70%, -50%)rotate(135deg);
+}
+
+.pagination {
+  width: 150px;
+  margin: 5% auto 0;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+	margin-top:0;
+}
+.pagination-circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background-color: rgba(83, 97, 223, 0.3);
+}
+/* jsでtargetクラスがついたら背景色を変える */
+.pagination-circle.target {
+  background-color: rgba(90, 97, 223, 0.8);
+}
+
+.breadcrumb {
+ list-style-type: none;
+ display: flex;
+ flex-wrap: wrap;
+ background-color: #000000;
+ color:#ABB9B9;
+ margin-top:0px
+	
+}
+
+
+
+.breadcrumb li:not(:last-of-type)::after{
+	content: ">";
+	margin:0.6em;
+	
+}
+a:link{color:#FFFFFF;
+}
+a:visited{color: #86CDC3;
+}
+
+#content{
+	height:100%;
+	margin-top: 50px;
+    
+}
+
+
+#main{
+	width:60%;
+   text-align:  left;
+	margin: 0px auto;
+	background-color:#D9E1CD;
+	margin-bottom: 50px;
+	background-image: url("../images/楽譜背景.gif");
+	opacity: 80%;
+	
+}
+
+#main h1{
+	width: 100%;
+	top:40px;
+}
+
+.boder{
+	border-bottom:3px solid rgba(34,77,42,0.40);
+	margin:0 0 30px 0px;
+}
+.boder_center{
+	border-bottom:3px solid rgba(34,77,42,0.40);
+	margin:30px 0 30px 0px;
+}
+
+
+img.sumplue{
+	width:350px;
+	padding-right:20px;
+
+}
+footer{
+	background-color: #ABB9B9;
+	bottom: 0;
+	text-align: right;
+	padding-top: 30px 0;
+	position:fixed;
+	position: sticky;
+	
+}
+
+footer ul{
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	left: 20px;
+	
+	
+}
+footer ul li{
+
+	padding-left: 0;
+	margin-bottom: 0px;
+	margin-top:-60px;
+    
+}
+
+.sns{
+	width: 100%;
+	line-height: 1px;
+}
+
+
+.sns img{
+	vertical-align: bottom;
+}
+#Copyright{
+	width: 100%;
+	background-color: #000000;
+}
+.Copyright{
+	text-align: center;
+    overflow: hidden;
+	color: #ABB9B9;
+	
+   
+	
+}
+#Copyrights{
+	width: 100%;
+	background-color: #000000;
+	position: relative;
+	bottom: 0px;
+	position: fixed;
+}
+
+a:link{color:#83CECF;
+}
+
+a:visited{color:#FFFFFF;
+}
+
+.info:link{color:#2E4329;}
+
+.channer:link{color:rgba(233,28,31,1.00);}
+
+.insta:link{color:rgba(213,31,184,1.00);}
+
+.x:link{color:rgba(44,65,227,1.00)}
+/* base */
+/* index */
+/* index */
+/* music use */
+.precautions h2{
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.price h2{
+	font-size: 40px;
+	margin-top: 20px;
+
+}
+.price{
+	overflow: hidden;
+padding-left: 70px;}
+/* music use */
+/* sample*/
+.tracks{
+	display: flex;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	text-align: center;
+	padding-left: 70px;
+	background:#617E5C60;
+}
+.tracks li{
+	transform:skewX(-30deg);
+	border-right: 1px solid #000000;
+	list-style-type: none;
+	padding:0 30px;
+}
+
+.tracks li a{
+	display: block;
+	transform:skewX(30deg);
+	color: #2E4329;
+}
+
+audio{
+	width: 100%
+	
+}
+.audio{
+	padding-top:10px;
+}
+
+.category_images{
+	float:left;
+	margin-bottom: 100px;
+	margin-right: 30px;
+}
+.category_property{
+	margin-bottom: 50px;
+	
+}
+
+.music_list{
+	position: center;
+	 margin-left: 140px;
+
+}
+.category{
+	overflow: hidden;
+	margin-top: 30px;
+	padding-top: 30px;
+	padding-left: 70px;
+	font-size: 20px;
+}
+/* sample */
+/* profile*/
+.Profile{
+	overflow: hidden;
+	padding-left: 70px;
+
+}
+
+.Profile h2{
+	font-size: 40px;
+	margin-top: 20px;
+}
+.Profile:last-child{
+	margin-bottom: 30px;
+
+}
+.precautions{
+	padding-left: 70px;
+}
+
+.dtm_photo{
+	float:right;
+	padding:0 50px 20px;
+}
+
+.nmber_list{
+	padding-left: 30px;
+	align: center;
+}
+
+/* profile */
+/*move*/
+.video{
+   margin:0 0 30px 30px;
+}
+.text{
+	text-align: center;
+}
+/*move*/
+/* info */
+.Form {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+width: 50%;
+
+}
+
+.Form-Item {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  align-items: center;
+}
+
+.Form-Item:nth-child(5) {
+  border-bottom: 1px solid #ddd;
+}
+.Form-Item-Label {
+  width: 100%;
+  font-size: 18px;
+}
+
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: #fff;
+  font-size: 14px;
+}
+
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: #eaedf2;
+  font-size: 18px;
+}
+
+.Form-Btn {
+  border-radius: 6px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #5bc8ac;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* info */

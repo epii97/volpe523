@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+@media screen and (max-width:550px){
+	
+.menu.open {
+  right: 0%;
+  width: 100%;
+}	
+
+	#carousel{
+		margin-bottom: 0;
+	}
+
+
+	.pagination{
+		display: block;
+	}
+.menu-list {
+   margin-bottom: 0;
+	
+}
+
+	.breadcrumb{
+     font-size: 8px;
+		
+}
+	#content{
+		width:100%;
+        margin-top:0;
+	}
+	#main{
+		width:100%;
+		margin-bottom: 200px;
+		margin-tpp:0;
+	}
+	
+	footer{
+	width: 100%;
+	background-color: #ABB9B9;
+	bottom: 0;
+	text-align: right;
+	padding-top: 30px;
+	position:fixed;
+
+	}
+	footer ul{
+	display: flex;
+	list-style-type: none;
+	width: 100%;
+	justify-content: center;
+	padding-top: 15px;
+	left: 20px;
+	
+	
+}
+a:link{color:#D8DBAC;
+}
+a:visited{color:#B1D99D;
+}
+	.Form{
+		width: 80%;
+		
+	}	
+	.Form-Item-Input {
+		width: 80%;
+	}
+	.Form-Item-Textarea{
+		width: 80%;
+	}
+	.boder{
+		width: 100%;
+	}
+	.category{
+		padding-left: 0;
+	}
+	.category h2{
+		font-size: 20px;
+	}
+	.music_list{
+		width: 130%;
+		margin-left:0px;
+	}
+	.category_images{
+		float:none;
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.tracks{
+		display: block;
+		box-sizing: content-box;
+		background-color:#D4E3DA80;
+		padding-left: 30px;
+		width: 90%;
+		margin:20px 0 20px 0;
+		
+	}
+	.tracks li{
+		border: none;
+		text-align: left;
+		list-style-type: circle;
+	}
+	.Profile h2{
+		font-size: 20px;
+	}
+	.precautions h2{
+		font-size: 20px;
+	}
+	.price h2{
+		font-size: 20px;
+	}
+	.video{
+		margin:0 0 30px 10px;
+	}
+	.background{
+		width: 150%;
+		height: 200%;
+		margin-bottom: 0px;
+		margin-top:200px;
+		margin-left: -110px;
+	}
+	#manus{
+		margin-bottom:0;
+	}
+	}
